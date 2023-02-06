@@ -18,6 +18,7 @@ const Diary = () => {
     useEffect(()=>{
         const titleElement = document.getElementsByTagName('title')[0];
         titleElement.innerHTML = `감정 일기장 -${id} 번 일기`;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[]);
 
     useEffect(()=> {
@@ -33,6 +34,7 @@ const Diary = () => {
                 navigate('/' ,{replace : true});
             }
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[id, diaryList]);
 
     if(!data) {
@@ -58,7 +60,7 @@ const Diary = () => {
                             `diary_img_wrapper_${data.emotion}`
                             ].join(" ")}
                         >
-                            <img src={curEmotionData.emotion_img}/>
+                            <img src={curEmotionData.emotion_img} alt="emotion_img"/>
                             <div className="emotion_description">
                                 {curEmotionData.emotion_descript}
                             </div>

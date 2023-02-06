@@ -14,6 +14,7 @@ const Edit = () => {
     useEffect(()=>{
         const titleElement = document.getElementsByTagName('title')[0];
         titleElement.innerHTML = `감정 일기장 -${id}번 일기 수정`;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[]);
 
     useEffect(()=>{
@@ -29,6 +30,7 @@ const Edit = () => {
                 navigate('/' ,{replace : true});
             }
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[id, diaryList]);
 
     return (
